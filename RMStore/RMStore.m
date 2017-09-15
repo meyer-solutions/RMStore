@@ -162,6 +162,7 @@ typedef void (^RMStoreSuccessBlock)();
 
 - (void)dealloc
 {
+    _shouldAddStorePaymentBlock = nil;
     [[SKPaymentQueue defaultQueue] removeTransactionObserver:self];
 }
 
