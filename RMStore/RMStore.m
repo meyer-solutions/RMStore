@@ -440,6 +440,14 @@ typedef void (^RMStoreSuccessBlock)();
     }
 }
 
+-(BOOL)paymentQueue:(SKPaymentQueue *)queue shouldAddStorePayment:(SKPayment *)payment forProduct:(SKProduct *)product {
+    if (self.shouldAddStorePaymentBlock) {
+        return self.shouldAddStorePaymentBlock(payment, product);
+    }
+    
+    return NO;
+}
+
 #pragma mark Download State
 
 - (void)didCancelDownload:(SKDownload*)download queue:(SKPaymentQueue*)queue
