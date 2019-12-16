@@ -135,7 +135,7 @@ typedef BOOL (^RMSKPaymentShouldAddStorePaymentBlock)(SKPayment* payment, SKProd
  @param successBlock The block to be called if the refresh receipt request is sucessful. Can be `nil`.
  @param failureBlock The block to be called if the refresh receipt request fails. Can be `nil`.
  */
-- (void)refreshReceiptOnSuccess:(void (^)())successBlock
+- (void)refreshReceiptOnSuccess:(void (^)(void))successBlock
                         failure:(void (^)(NSError *error))failureBlock __attribute__((availability(ios,introduced=7.0)));
 
 ///---------------------------------------------
