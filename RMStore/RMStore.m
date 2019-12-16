@@ -151,10 +151,10 @@ typedef void (^RMStoreSuccessBlock)();
 {
     if (self = [super init])
     {
-        _addPaymentParameters = [NSMutableDictionary dictionary];
-        _products = [NSMutableDictionary dictionary];
-        _productsRequestDelegates = [NSMutableSet set];
-        _restoredTransactions = [NSMutableArray array];
+        _addPaymentParameters = [[NSMutableDictionary alloc] init];
+        _products = [[NSMutableDictionary alloc] init];
+        _productsRequestDelegates = [NSMutableSet new];
+        _restoredTransactions = [NSMutableArray new];
         [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
     }
     return self;

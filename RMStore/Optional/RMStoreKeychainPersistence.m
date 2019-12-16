@@ -20,7 +20,6 @@
 
 #import "RMStoreKeychainPersistence.h"
 #import <Security/Security.h>
-//    UICKeyChainStore* store = [UICKeyChainStore keyChainStoreWithService:@"MKStoreKit"];
 
 NSString* const RMStoreTransactionsKeychainKey = @"MKStoreKit";
 
